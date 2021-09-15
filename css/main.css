@@ -1,0 +1,782 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*Fuentes*/
+
+@font-face {
+  font-family: "Archivo-VariableFont_wdth";
+  src: url(../doc/fonts/Archivo-VariableFont_wdth.ttf);
+}
+
+@font-face {
+  font-family: "Gotham-Black";
+  src: url(../doc/fonts/Gotham-Black.otf);
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(../doc/fonts/GothamBold.ttf);
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url(../doc/fonts/GothamBook.ttf);
+}
+
+@font-face {
+  font-family: "GothamBookItalic";
+  src: url(../doc/fonts/GothamBookItalic.ttf);
+}
+
+@font-face {
+  font-family: "GothamMedium";
+  src: url(../doc/fonts/GothamMedium.ttf);
+}
+
+/*VARIABLES*/
+
+:root {
+  --variableFont: "Archivo-VariableFont_wdth";
+  --gothamBlack: "Gotham-Black";
+  --GothamBold: "GothamBold";
+  --GothamBook: "GothamBook";
+  --GothamBookItalic: "GothamBookItalic";
+  --GothamMedium: "GothamMedium";
+  --textospan: "rgb(34, 167, 112)";
+}
+
+/*Globales*/
+
+body {
+  overflow-x: hidden!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--GothamBold);
+}
+
+p {
+  font-family: var(--variableFont);
+}
+
+/* BOTONES */
+
+.boton-estoy-lista {
+  background-color: rgb(34, 167, 114);
+  color: white;
+  padding: .7rem 3.5rem;
+  text-decoration: none;
+  border-radius: 5rem 5rem 5rem 5rem;
+  font-family: var(--GothamBold);
+}
+
+.boton-meuno {
+  padding: .7rem 2.8rem!important;
+}
+
+.boton-seccion-7 {
+  margin-top: 2rem!important;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* HEADER / SECCION 1 */
+
+.nav-container {
+  width: 89%;
+  margin: 0 auto;
+}
+
+.contenedor-header {
+  width: 90%;
+  margin: 0 5rem;
+}
+
+.contenedor-cajas-aboslutas {
+  display: flex;
+}
+
+.contenedor-header .contenedor-texto {
+  width: 45%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  margin-left: 5rem;
+}
+
+.contenedor-header .contenedor-imagen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contenedor-imagen img {
+  border-bottom-right-radius: 20%;
+}
+
+header div .contenedor-texto h1 {
+  font-family: var(--GothamBook);
+  font-weight: bolder;
+  font-size: 2.2rem;
+}
+
+header div .contenedor-texto h1 span {
+  color: rgb(34, 167, 112);
+}
+
+header div .contenedor-texto h2 {
+  font-family: var(--gothamBlack);
+  width: 70%;
+}
+
+header div .contenedor-texto p {
+  font-size: 1.2rem;
+}
+
+@media (max-width:768px) {
+  .nav-container .contenedor-boton {
+    display: none;
+  }
+  header {
+    width: 100%;
+  }
+  .contenedor-header {
+    position: static!important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contenedor-texto {
+    margin: 0 auto!important;
+    width: 90%!important;
+    position: static!important;
+  }
+  .contenedor-texto h1 {
+    font-size: 2rem!important;
+    font-weight: bolder!important;
+  }
+  .contenedor-texto h2 {
+    width: 100%!important;
+    margin: 1rem 0!important;
+  }
+  .contenedor-imagen {
+    width: 90%!important;
+    justify-content: left;
+    position: static!important;
+  }
+  .contenedor-imagen img {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  .contenedor-listado-ic {
+    margin: 1rem 0;
+  }
+}
+
+/** SECCION 2 **/
+
+.seccion2-contenedor {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-imagenes-seccion2 .d-flex .contenedor-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-imagenes-seccion2 .d-flex .contenedor-img img {
+  width: 14rem;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+.contenedor-texto-seccion2 h1 {
+  font-family: var(--GothamBold);
+}
+
+.contenedor-texto-seccion2 h1 span {
+  color: rgb(34, 167, 112);
+}
+
+.contenedor-texto-seccion2 p span {
+  font-family: var(--gothamBlack);
+}
+
+@media (max-width:768px) {
+  .seccion2-contenedor {
+    width: 95%;
+    flex-direction: column-reverse;
+  }
+  .contenedor-imagenes-seccion2 {
+    width: 100%;
+  }
+  .contenedor-imagenes-seccion2 .d-flex .contenedor-img img {
+    width: 90%;
+  }
+  .contenedor-texto-seccion2 {
+    width: 100%!important;
+  }
+}
+
+/** SECCION 3 **/
+
+.seccion3 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.seccion3 .contenedor-imagenes-seccion3 {
+  width: 100%;
+}
+
+.seccion3 .contenedor-imagenes-seccion3 img {
+  width: 100%;
+}
+
+.seccion3 .contenedor-texto-seccion3 h2 {
+  margin-bottom: 2rem;
+}
+
+.seccion3 .contenedor-texto-seccion3 h2 span {
+  color: rgb(34, 167, 112);
+}
+
+.seccion3 .contenedor-texto-seccion3 .contenedor-parrafos div .p {
+  margin: 1.2rem 0;
+}
+
+.seccion3 .contenedor-texto-seccion3 .contenedor-parrafos div p span {
+  font-family: var(--gothamBlack);
+}
+
+@media (max-width:768px) {
+  .seccion3 {
+    width: 90%;
+    flex-direction: column!important;
+  }
+  .texto-costado {
+    display: none;
+  }
+}
+
+/* SECCION 4 */
+
+.texto-costado {
+  transform: rotate(270deg);
+  left: -12%;
+  bottom: 0;
+}
+
+.texto-costado p {
+  font-size: 6rem;
+  color: rgb(212, 240, 228);
+  font-family: var(--gothamBlack);
+}
+
+.seccion4 .contenedor-texto {
+  width: 100%;
+  margin: 0 auto;
+  height: 20%;
+  clip-path: ellipse(50% 50% at 50% 50%);
+  background-color: white;
+  z-index: 150;
+  margin-bottom: -3rem;
+}
+
+.seccion4 .contenedor-texto .contenido {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.seccion4 .contenedor-texto .contenido p {
+  font-family: var(--gothamBlack);
+}
+
+.seccion4 .contenedor-texto .contenido p span {
+  color: rgb(34, 167, 112)
+}
+
+.seccion4 .contenedor-texto-centrado {
+  color: white;
+  width: 600px;
+  top: 15%;
+  left: 50%;
+  margin-left: -250px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.seccion4 .contenedor-texto-centrado h2 {
+  font-size: 2rem;
+}
+
+.seccion4 .contenedor-texto-centrado h2 span {
+  color: rgb(34, 167, 112);
+  padding-bottom: 1rem;
+}
+
+.seccion4 .contenedor-texto-centrado h3 {
+  font-size: 1.5rem;
+}
+
+.seccion4 .contenedor-texto-centrado div {
+  margin-top: 2rem;
+}
+
+@media (max-width:768px) {
+  .seccion4 .contenedor-texto .contenido {
+    width: 90%;
+  }
+  .seccion4 .contenedor-texto-centrado {
+    color: white;
+    width: 400px;
+    top: 15%;
+    left: 65%;
+  }
+}
+
+/* SECCION 5 */
+
+.seccion-5 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contenedor-seccion5-info {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: .8rem;
+  text-align: center;
+  width: 28%;
+}
+
+.contenedor-seccion5-info img {
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+.contenedor-seccion5-info p {
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (max-width:768px) {
+  .seccion-5 {
+    width: 60%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .contenedor-seccion5-info {
+    width: 100%;
+    margin: 1rem 0!important;
+  }
+}
+
+/*SECCION 6*/
+
+.seccion6 .row {
+  align-items: center;
+  overflow: hidden;
+}
+
+.seccion6 .row {
+  align-items: center;
+}
+
+.seccion6 .row div h2 {
+  font-size: 2.2rem;
+  padding-bottom: 1rem;
+}
+
+.seccion6 .row div h2 span {
+  color: rgb(34, 167, 112);
+}
+
+.seccion6 .row div h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.seccion6 .row div p {
+  font-family: var(--GothamBook);
+  font-size: 1.1rem;
+}
+
+@media (max-width:768px) {
+  .seccion6 {
+    width: 65%!important;
+    margin: 0 auto!important;
+  }
+  .seccion6 .row div {
+    width: 100%!important;
+    padding: 0!important;
+  }
+}
+
+/*SECCION 7*/
+
+.seccion7 {
+  width: 70%;
+  margin: 6rem auto;
+}
+
+.seccion-7 div h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.letras-bordes-azules {
+  -webkit-text-stroke: 2px rgb(34, 167, 114);
+  color: transparent;
+  font-size: 12rem;
+  font-weight: bold;
+}
+
+.seccion7-contenedor {
+  width: 38%;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: left;
+  padding-bottom: 0;
+}
+
+.seccion7 .contenedor-1 {
+  background-color: rgb(34, 167, 114);
+  color: white;
+  padding-bottom: 0!important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seccion7 .contenedor-1 div {
+  align-items: flex-end;
+}
+
+.seccion7 .contenedor-2 {
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+
+/*SECCION 8*/
+
+.contenedor-adevertencia {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.contenido-advertencia {
+  text-align: justify;
+  background-color: rgb(212, 240, 228);
+  border-radius: 2rem;
+}
+
+/** SECCION 9 **/
+
+#seccion9 {
+  width: 90%;
+  height: 600px;
+  margin: 0 auto;
+  background-color: rgb(212, 240, 228);
+}
+
+#seccion9 .contenedor-img {
+  align-items: flex-end;
+}
+
+/*SECCION 10*/
+
+.seccion-10 {
+  width: 80%;
+  padding: 1rem 0;
+  margin: 7rem auto;
+}
+
+.contenedor-preguntas {
+  z-index: 100;
+}
+
+.seccion-10 .contenedor h2 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.contenedor-preguntas .preguntas {
+  background-color: white;
+  width: 45%;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: .2rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contenedor-preguntas .preguntas img {
+  width: 4%;
+}
+
+.seccion-10 .contenedor .position-absolute {
+  z-index: 0;
+  top: 5%;
+  left: 40%;
+  width: 35%;
+}
+
+.seccion-10 .contenedor .position-absolute img {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden, [hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active, .sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *, *::before, *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after, a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
