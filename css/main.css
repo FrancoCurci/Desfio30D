@@ -499,12 +499,25 @@ header div .contenedor-texto p {
 
 @media (max-width:768px) {
   .seccion6 {
-    width: 65%!important;
+    width: 100%!important;
     margin: 0 auto!important;
+  }
+  .seccion6 .row div:last-child {
+    width: 85%!important;
+    padding: 0!important;
   }
   .seccion6 .row div {
     width: 100%!important;
     padding: 0!important;
+  }
+  .seccion6 .row div img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%!important;
+  }
+  .seccion6 .row {
+    display: flex!important;
+    flex-direction: column-reverse!important;
   }
 }
 
@@ -556,7 +569,60 @@ header div .contenedor-texto p {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+@media (max-width:768px) {
+  .seccion7 {
+    flex-direction: column;
+    width: 85%;
+  }
+  .seccion7-contenedor {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
 
+/*NUMEROS*/
+
+.numeros-seccion div h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contenedor-boton-seccion7 {
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width:768px) {
+  .numeros-seccion .d-flex {
+    flex-direction: column;
+  }
+  .contenedores-seccion7 {
+    align-items: center;
+    margin-right: 4rem;
+  }
+  .contenedores-seccion7 .cont-secc7-choose {
+    margin-left: 4rem;
+  }
+  .numeros-seccion .d-flex .contenedor-seccion7 {
+    width: 50%;
+    padding: 1rem!important;
+  }
+  .numeros-seccion .d-flex .contenedor-seccion7 .letras-bordes-azules {
+    font-size: 6rem;
+  }
+  .numeros-seccion .d-flex .contenedor-seccion7 .parrafo {
+    text-align: center;
+  }
+  .contenedor-boton-seccion7 {
+    width: 60%;
+    margin: 1rem auto;
+  }
+  .contenedor-boton-seccion7 .boton-estoy-lista {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    font-family: var(--GothamMedium);
+  }
+}
 
 /*SECCION 8*/
 
@@ -571,6 +637,21 @@ header div .contenedor-texto p {
   border-radius: 2rem;
 }
 
+.durazno-absoluto {
+  position: absolute;
+  width: 30%;
+  top: 45%;
+  left: -22%;
+}
+
+@media(max-width:768px) {
+  .durazno-absoluto {
+    top: 85%;
+    left: 60%;
+    width: 50%;
+  }
+}
+
 /** SECCION 9 **/
 
 #seccion9 {
@@ -578,10 +659,22 @@ header div .contenedor-texto p {
   height: 600px;
   margin: 0 auto;
   background-color: rgb(212, 240, 228);
+  display: flex;
 }
 
 #seccion9 .contenedor-img {
   align-items: flex-end;
+}
+
+@media (max-width:768px) {
+  #seccion9 {
+    height: auto;
+    flex-direction: column-reverse!important;
+  }
+  #seccion9 div{
+    width: 90%;
+
+  }
 }
 
 /*SECCION 10*/
@@ -599,6 +692,10 @@ header div .contenedor-texto p {
 .seccion-10 .contenedor h2 {
   font-size: 2rem;
   margin-bottom: 1.8rem;
+}
+
+.seccion-10 .contenedor h2 span {
+  color: rgb(34, 167, 112);
 }
 
 .contenedor-preguntas .preguntas {
@@ -630,6 +727,21 @@ header div .contenedor-texto p {
 
 .seccion-10 .contenedor .position-absolute img {
   width: 100%;
+}
+
+@media(max-width:768px) {
+  .seccion-10 {
+    width: 95%;
+  }
+  .contenedor-preguntas .preguntas {
+    width: 90%;
+  }
+  .seccion-10 .contenedor .position-absolute {
+    position: relative!important;
+    width: 80%;
+    top: 0;
+    left: 0;
+  }
 }
 
 /* ==========================================================================
