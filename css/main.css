@@ -413,10 +413,52 @@ header div .contenedor-texto p {
   margin-top: 2rem;
 }
 
+.seccion4 .contenedor-img {
+  width: 50vw;
+  height: 30rem;
+}
+
+.seccion4 .imagen-1 .fondocelular {
+  display: none;
+}
+
 @media (max-width:768px) {
-  .seccion4 .contenedor-texto .contenido {
-    width: 90%;
+  .seccion4 .contenedor-texto {
+    width: 100%!important;
+    margin-right: 0!important;
+    margin-left: 0!important;
+    position: relative!important;
+    margin-bottom: -3rem!important;
+    z-index: 1000;
   }
+  .seccion4 .contenedor-texto .contenido{
+    width: 70%!important;
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-size: .8rem;
+    
+  }
+  section .seccion4 {
+    height: 900px;
+    width: 100%;
+  }
+  .seccion4 .imagen-2 {
+    display: none;
+  }
+  .seccion4 .imagen-1 .fondoescritorio {
+    display: none;
+  }
+  .seccion4 .imagen-1 {
+    width: 100%!important;
+    height: 900px;
+  }
+  .seccion4 .imagen-1 .fondocelular {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+  
   .seccion4 .contenedor-texto-centrado {
     color: white;
     width: 400px;
@@ -671,9 +713,8 @@ header div .contenedor-texto p {
     height: auto;
     flex-direction: column-reverse!important;
   }
-  #seccion9 div{
+  #seccion9 div {
     width: 90%;
-
   }
 }
 
