@@ -189,6 +189,20 @@ p {
   margin-bottom: 1rem;
 }
 
+/*nav*/
+
+.contenedor-logo {
+  width: 5rem!important;
+  position: relative;
+}
+
+.logosentirsemejor {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 100%;
+}
+
 /* HEADER / SECCION 1 */
 
 .nav-container {
@@ -847,6 +861,29 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
     width: 80%;
     top: 0;
     left: 0;
+  }
+}
+
+/*footer*/
+
+footer {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div {
+  width: 50%;
+}
+
+.redes-sociales {
+  text-align: end;
+}
+
+@media (max-width:768px) {
+  footer .d-flex {
+    padding: 1rem 0;
   }
 }
 
