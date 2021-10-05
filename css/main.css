@@ -182,7 +182,16 @@ p {
   border-radius: 5rem 5rem 5rem 5rem;
   font-family: var(--GothamBold);
 }
+@media(max-width:768px){
+  
+.boton-estoy-lista {
 
+  padding: .5rem 2.5rem;
+  
+  border-radius: 5rem 5rem 5rem 5rem;
+  
+}
+}
 .boton-meuno {
   padding: 1rem 2.8rem!important;
 }
