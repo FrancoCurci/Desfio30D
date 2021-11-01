@@ -208,6 +208,7 @@ p {
 .contenedor-logo {
   width: 5rem!important;
   position: relative;
+  z-index: 100;
 }
 
 .logosentirsemejor {
@@ -309,7 +310,6 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
 .header-img-mobil {
   display: none;
 }
-
 @media (max-width:768px) {
   .nav-container .contenedor-boton {
     display: none;
@@ -357,6 +357,16 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
   }
 }
 
+@media (max-width:1024px) {
+
+  .contenedor-texto {
+  
+    width: 65%!important;
+  
+  }
+  
+}
+
 /** SECCION 2 **/
 
 .seccion2-contenedor {
@@ -393,6 +403,13 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
   font-family: var(--gothamBlack)!important;
 }
 
+@media (max-width:1024px) {
+  .seccion2-contenedor {
+    width: 95%;
+    flex-direction: column-reverse;
+  }
+ 
+}
 @media (max-width:768px) {
   .seccion2-contenedor {
     width: 95%;
@@ -438,6 +455,13 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
 
 .seccion3 .contenedor-texto-seccion3 .contenedor-parrafos div p span {
   font-family: var(--gothamBlack);
+}
+
+@media (max-width:1024px) {
+  
+  .texto-costado {
+    display: none;
+  }
 }
 
 @media (max-width:768px) {
@@ -641,7 +665,20 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
+@media (max-width:768px) {
+  .seccion-5 {
+    
+    margin-top:15rem!important;
+  }
+  
+}
+@media (max-width:425px) {
+  .seccion-5 {
+    
+    margin-top:0rem!important;
+  }
+  
+}
 @media (max-width:768px) {
   .seccion-5 {
     width: 60%;
@@ -984,8 +1021,9 @@ header div .contenedor-texto .contenedor-listado-ic ul li img {
   .seccion-10 {
     width: 95%;
   }
+  
   .contenedor-preguntas .preguntas {
-    width: 100%;
+    width: 100%!important;
   }
   .seccion-10 .contenedor .position-absolute {
     position: relative!important;
